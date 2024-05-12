@@ -108,17 +108,17 @@
             bindings = <
 &kp ESC  &kp Q         &kp W         &kp E          &kp R          &kp T           &kp Y            &kp U          &kp I          &kp O         &kp P           &kp MINUS
 &kp TAB  &u_mt LGUI A  &u_mt LALT S  &u_mt LCTRL D  &u_mt LSHFT F  &kp G           &kp H            &u_mt LSHFT J  &u_mt LCTRL K  &u_mt LALT L  &u_mt LGUI SQT  &kp GRAVE
-&mo 5    &kp Z         &kp X         &kp C          &kp V          &kp B           &kp N            &kp M          &kp COMMA      &kp DOT       &kp SLASH       &mo 5
-                                     &lt 3 ESC      &lt 5 TAB      &lt 2 RETURN    &lt 2 BACKSPACE  &lt 1 SPACE
+&mo 6    &kp Z         &kp X         &kp C          &kp V          &kp B           &kp N            &kp M          &kp COMMA      &kp DOT       &kp SLASH       &mo 6
+                                     &lt 3 ESC      &lt 6 TAB      &lt 2 RETURN    &lt 2 BACKSPACE  &lt 1 SPACE
             >;
         };
 
         NAV {
             bindings = <
-&trans  &trans        &trans        &trans            &trans          &trans    &kp K_REDO     &kp K_PASTE    &kp K_COPY   &kp K_CUT  &kp K_UNDO    &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &kp CAPSLOCK  &trans
-&trans  &trans        &trans        &trans            &trans          &trans    &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp INSERT    &trans
-                                    &trans            &trans          &trans    &kp BACKSPACE  &kp SPACE
+&trans  &trans        &trans        &trans            &trans          &trans    &kp K_REDO  &kp K_PASTE    &kp K_COPY   &kp K_CUT  &kp K_UNDO    &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans    &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &kp CAPSLOCK  &trans
+&trans  &trans        &trans        &trans            &trans          &trans    &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp INSERT    &trans
+                                    &trans            &trans          &trans    &trans      &trans
             >;
         };
 
@@ -137,6 +137,15 @@
 &trans  &kp DEL  &kp F5  &kp F6   &kp F7   &kp F8     &out OUT_TOG  &kp K_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp LALT
 &trans  &trans   &kp F9  &kp F10  &kp F11  &kp F12    &trans        &trans            &trans             &trans           &trans        &to 0
                          &trans   &trans   &trans     &trans        &trans
+            >;
+        };
+
+        MEDIA {
+            bindings = <
+&trans  &trans        &trans        &trans            &trans      &trans    &trans      &trans            &trans             &trans           &trans        &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT  &trans    &trans      &kp K_PREVIOUS    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_NEXT    &trans
+&trans  &trans        &trans        &trans            &trans      &trans    &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &trans
+                                    &trans            &trans      &trans    &kp K_STOP  &kp K_PLAY_PAUSE
             >;
         };
 
