@@ -9,9 +9,10 @@ set -euxo pipefail
 build_and_copy () {
     local side=$1
     west build \
+        -p
         -b nice_nano_v2 -- \
         -DSHIELD=charybdis_$side \
-        -DZMK_CONFIG="/home/erenatas/GitRepos/zmk-config-charybdis-mini-wireless/config"
+        -DZMK_CONFIG="/Users/pierrevanrooyen/Documents/PvT/zmk/fresh/config"
 
     cp "./build/zephyr/zmk.uf2" "$CURRENT_DIR/build/charybdis_$side.uf2"
 }
@@ -19,7 +20,7 @@ build_and_copy () {
 CURRENT_DIR="$(pwd)"
 CONFIG_DIR="$(pwd)/config"
 
-DEFAULTZMKAPPDIR="$HOME/GitRepos/zmk/app"
+DEFAULTZMKAPPDIR="$HOME/Documents/PvT/zmk/fresh/zmk/app"
 ZMK_APP_DIR="${1:-$DEFAULTZMKAPPDIR}"
 
 mkdir -p $CURRENT_DIR/build
